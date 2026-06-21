@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>lolja</title>
+
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(56, 56, 56);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        /* Menu */
+        .menu {
+            display: flex;
+            background-color: #222;
+        }
+
+        .menu button {
+            flex: 1;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu button:hover {
+            background-color: #555;
+        }
+
+        /* Abas */
+        .aba {
+            display: none;
+            padding: 20px;
+        }
+
+        .ativa {
+            display: block;
+        }
+
+        /* Vitrines da Home */
+        .vitrine {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 80px;
+        }
+
+        .vitrine-invertida {
+            flex-direction: row-reverse;
+        }
+
+        .banner img {
+            width: 600px;
+            border-radius: 10px;
+        }
+
+        .produtos-lado {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        /* Produtos */
+        .produtos-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .produto {
+            background-color: #555;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 220px;
+        }
+
+        .produto img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <div class="menu">
+        <button onclick="mostrarAba('home')">Home</button>
+        <button onclick="mostrarAba('produtos')">Produtos</button>
+        <button onclick="mostrarAba('contato')">Contato</button>
+        <button onclick="mostrarAba('sobre')">Sobre</button>
+    </div>
+
+    <!-- HOME -->
+    <div id="home" class="aba ativa">
+
+        <h1>Home</h1>
+        <p>Bem-vindo ao site.</p>
+
+        <!-- PRIMEIRA VITRINE -->
+        <div class="vitrine">
+
+            <div class="banner">
+                <img src="01.png" alt="Banner Corinthians">
+            </div>
+
+            <div class="produtos-lado">
+
+                <div class="produto">
+                    <img src="sccpcamisa.webp" alt="Corinthians s26">
+                    <h3>Corinthians s26</h3>
+                    <p>R$ 349,90</p>
+                </div>
+
+                <div class="produto">
+                    <img src="corinthians s24.jpg" alt="Corinthians s24">
+                    <h3>Corinthians s24</h3>
+                    <p>R$ 49,90</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SEGUNDA VITRINE INVERTIDA -->
+        <div class="vitrine vitrine-invertida">
+
+            <div class="banner">
+                <img src="cbf.jpg" alt="Banner Brasil">
+            </div>
+
+            <div class="produtos-lado">
+
+                <div class="produto">
+                    <img src="ccbf.jpg" alt="Brasil s26">
+                    <h3>Brasil s26</h3>
+                    <p>R$ 49,90</p>
+                </div>
+
+                <div class="produto">
+                    <img src="cbbf.jpg" alt="Brasil s25">
+                    <h3>Brasil s26</h3>
+                    <p>R$ 49,90</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PRODUTOS -->
+    <div id="produtos" class="aba">
+
+        <h1>Produtos</h1>
+        <p>Aqui ficam os produtos.</p>
+        <h2>Produtos disponíveis</h2>
+
+        <div class="produtos-container">
+
+            <div class="produto">
+                <img src="sccpcamisa.webp" alt="Corinthians s26">
+                <h3>Corinthians s26</h3>
+                <p>R$ 49,90</p>
+            </div>
+
+            <div class="produto">
+                <img src="spain.jpg" alt="Espanha s26">
+                <h3>Espanha s26</h3>
+                <p>R$ 49,90</p>
+            </div>
+
+            <div class="produto">
+                <img src="ccbf.jpg" alt="Brasil s26">
+                <h3>Brasil s26</h3>
+                <p>R$ 49,90</p>
+            </div>
+
+            <div class="produto">
+                <img src="corinthians s24.jpg" alt="Corinthians s24">
+                <h3>Corinthians s24</h3>
+                <p>R$ 49,90</p>
+            </div>
+
+            
+        </div>
+
+                <div class="produtos-container-2">
+
+            <div class="produto">
+                <img src="cbbf.jpg" alt="Brasil s26">
+                <h3>Brasil s26</h3>
+                <p>R$ 49,90</p>
+            </div>
+
+            <div class="produto">
+                <img src="spain.jpg" alt="Espanha s26">
+                <h3>Espanha s26</h3>
+                <p>R$ 49,90</p>
+            </div>
+
+            <div class="produto">
+                <img src="ccbf.jpg" alt="Brasil s26">
+                <h3>Brasil s26</h3>
+                <p>R$ 49,90</p>
+            </div>
+
+            <div class="produto">
+                <img src="corinthians s24.jpg" alt="Corinthians s24">
+                <h3>Corinthians s24</h3>
+                <p>R$ 49,90</p>
+            </div>
+
+            
+        </div>
+
+    </div>
+
+    <!-- CONTATO -->
+    <div id="contato" class="aba">
+        <h1>Contato</h1>
+
+        <p>
+            Entre em contato conosco.<br>
+            Email: alicr1m00@gmail.com<br>
+            Telefone: (19) 99220-4428<br>
+            Instagram: @_alicr1m
+        </p>
+    </div>
+
+    <!-- SOBRE -->
+    <div id="sobre" class="aba">
+        <h1>Sobre</h1>
+        <p>Criado por Alicrim para venda ou tentativa de produtos.</p>
+    </div>
+
+    <script>
+        function mostrarAba(id) {
+
+            let abas = document.querySelectorAll('.aba');
+
+            for (let i = 0; i < abas.length; i++) {
+                abas[i].classList.remove('ativa');
+            }
+
+            document.getElementById(id).classList.add('ativa');
+        }
+    </script>
+
+</body>
+</html>
